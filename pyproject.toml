@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teamcity-pipeline-fixture"
+version = "0.1.0"
+description = "Deterministic Python fixture for learning and testing TeamCity pipelines"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "TeamCity learning project" },
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+  "pytest==8.4.2",
+]
+
+[tool.pytest.ini_options]
+addopts = ["--strict-config", "--strict-markers", "-ra"]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
