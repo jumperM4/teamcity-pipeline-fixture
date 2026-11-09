@@ -30,6 +30,6 @@ def test_divide(dividend: float, divisor: float, expected: float) -> None:
 
 
 def test_divide_rejects_zero_divisor() -> None:
-    with pytest.raises(ValueError, match="division by zero"):
+    with pytest.raises(ValueError, match="divisor must not be zero"):
         divide(5.0, 0.0)
 
