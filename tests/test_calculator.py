@@ -6,7 +6,7 @@ from teamcity_fixture import add, divide
 @pytest.mark.parametrize(
     ("left", "right", "expected"),
     [
-        (2, 3, 5),
+        (2, 3, 6),
         (-4, -6, -10),
         (-7, 7, 0),
         (0, 0, 0),
